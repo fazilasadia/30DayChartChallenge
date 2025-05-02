@@ -1,14 +1,14 @@
 install.packages("PakPC2023", dependencies = TRUE)
 library(PakPC2023)
 library(ggplot2)
-library(ggplot2library(dplyr)
+library(dplyr)
 library(showtext)
 library(ggtext)
 
 
 df <- TABLE_01 %>%
-  filter(REGION == "OVERALL") %>%       # Keep only 'OVERALL' region
-  filter(!PROVINCE == "ISLAMABAD") %>%       # Keep only 'OVERALL' region
+  filter(REGION == "OVERALL") |>       # Keep only 'OVERALL' region
+  filter(!PROVINCE == "ISLAMABAD") |>       # Keep only 'OVERALL' region
   select(PROVINCE, TEHSIL,AVG_HH_SIZE)|>
   group_by(TEHSIL, PROVINCE)|>
   rename(HOUSEHOLD_SIZE = AVG_HH_SIZE)
