@@ -104,7 +104,6 @@ ggplot(df, aes(x = PROVINCE, y = HOUSEHOLD_SIZE, color = PROVINCE, fill = PROVIN
   )
 
 
-
 showtext_opts(dpi = 320)
 
 ggsave("kinship.png",dpi=320,
